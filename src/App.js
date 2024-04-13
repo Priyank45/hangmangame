@@ -6,6 +6,7 @@ import Word from './components/Word';
 import Notification from './components/Notification';
 import Popup from './components/Popup';
 import {showNotification as show} from './helpers/helpers';
+
 import './App.css';
 
 // const words = ['application', 'programming', 'interface', 'wizard','dragon'];
@@ -94,12 +95,14 @@ function App() {
 
   return (
     <>
+    <div>
       <Header />
       <div class="game-container">
         <Figure wrongLetters={wrongLetters} />
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
          
+      </div>
       </div>
       <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} 
       setPlayable={setPlayable} playAgain={playAgain} /> 
